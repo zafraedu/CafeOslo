@@ -1,0 +1,441 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+:focus {
+  outline: 0;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*     -----     EMPIEZA EL CÓDIGO     -----     */
+/*códigos generales*/
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-top: 30px;
+}
+hr {
+  margin: 30px auto;
+  width: 30%;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 22px;
+  margin: 30px 10% 20px 10%;
+}
+p {
+  margin: 10px;
+}
+
+.portada,
+.desayuno {
+  background-size: cover;
+  /* background-position: center; */
+  color: #f5f0ed;
+}
+.domingo,
+.localizacion {
+  color: #ded6c0;
+  background-color: #d03b40;
+}
+.fiesta,
+.contacto {
+  color: #d03b40;
+  background-color: #ded6c0;
+}
+.categorias div {
+  background-color: #f5f0ed;
+  color: #3c3c3b;
+}
+
+/*cuerpo*/
+
+.lanzador-menu {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  background-color: #d03b40;
+  margin: 15px;
+  border-radius: 10px;
+}
+.logo {
+  width: 150px;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+}
+.portada {
+  background-position: center;
+  padding: 10px;
+  background-image: url(Imágenes/Fondo1.jpg);
+  min-height: 500px;
+}
+.portada h1 {
+  margin-top: 100px;
+}
+
+.domingo,
+.fiesta {
+  padding: 10px;
+  min-height: 250px;
+}
+
+.desayuno {
+  background-position: right;
+  padding: 10px;
+  height: 200px;
+  background-image: url(Imágenes/Fondo2.jpg);
+  min-height: 400px;
+}
+.botton {
+  margin: 60px 0 20px 0;
+}
+.botton a {
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f5f0ed;
+  border: 3px solid #f5f0ed;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 200ms padding, border;
+}
+.botton a:hover {
+  border: 5px solid #f5f0ed;
+  padding: 30px;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.categorias div {
+  padding: 10px;
+  min-height: 250px;
+}
+.categorias img {
+  margin: 20px auto 5px auto;
+  width: 80px;
+}
+.categorias h2 {
+  margin: 0;
+}
+
+.localizacion,
+.contacto {
+  padding: 10px;
+  min-height: 250px;
+}
+.localizacion a {
+  text-decoration: none;
+  color: #ded6c0;
+  font-weight: 600;
+}
+.contacto a {
+  text-decoration: none;
+  color: #d03b40;
+  font-weight: 600;
+}
+
+.navegacion {
+  text-transform: uppercase;
+  background-color: #241d1b;
+}
+.navegacion a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #f5f0ed;
+  border-bottom: 1px solid #f5f0ed;
+}
+
+.copyright {
+  padding: 5px;
+  min-height: 80px;
+  background-color: #241d1b;
+  color: #f5f0ed;
+}
+/* medias queries */
+@media screen and (min-width: 400px) {
+  p {
+    margin: 0 15% 0 15%;
+  }
+}
+/* JavaScript */
+@media screen and (max-width: 699px) {
+  .js .navegacion {
+    max-height: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: max-height 0.5;
+    position: absolute;
+    top: 36px;
+    right: 15px;
+    background-color: #d03b40;
+    border-radius: 10px;
+  }
+  .js .navegacion a {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px;
+    color: #ded6c0;
+    border-bottom: 1px solid #ded6c0;
+    font-size: 14px;
+  }
+  .js .navegacion.menu-desplegado {
+    max-height: 270px;
+    max-width: 150px;
+  }
+}
+@media screen and (min-width: 700px) {
+  h2 {
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  .lanzador-menu {
+    display: none;
+  }
+  li {
+    display: inline-block;
+  }
+  .navegacion {
+    min-width: 100px;
+    position: absolute;
+    top: 22px;
+    right: 15px;
+    background-color: transparent;
+  }
+  .navegacion a {
+    font-weight: 600;
+    font-size: 12px;
+    border: 0;
+    transition: 500ms;
+  }
+  .navegacion a:hover {
+    border-bottom: 2px solid #f5f0ed;
+    font-size: 20px;
+  }
+  hr {
+    margin: 50px auto;
+  }
+  .portada p,
+  .desayuno p {
+    margin: 30px 20% 30px 20%;
+  }
+  .desayuno {
+    min-height: 500px;
+  }
+  .desayuno h1 {
+    margin-top: 100px;
+  }
+  .domingo,
+  .contacto {
+    min-height: 350px;
+    width: 50%;
+    float: left;
+  }
+  .fiesta,
+  .localizacion {
+    min-height: 350px;
+    display: inline-block;
+    width: 50%;
+  }
+  .categorias div {
+    min-height: 350px;
+    width: 50%;
+    display: inline-block;
+  }
+  .pan,
+  .dulce {
+    float: left;
+  }
+  .copyright p {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .portada {
+    height: 550px;
+  }
+  .desayuno {
+    height: 450px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1438px) {
+  .categorias div {
+    min-height: 300px;
+  }
+  .categorias img {
+    width: 150px;
+    float: left;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .categorias p {
+    margin: 0;
+    margin-left: 200px;
+  }
+  .categorias div p,
+  .categorias div h2 {
+    text-align: left;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+  .categorias div h2 {
+    margin-left: 200px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  p {
+    font-size: 18px;
+  }
+
+  .navegacion a {
+    font-size: 14px;
+  }
+  .portada {
+    min-height: 800px;
+  }
+  .portada h1 {
+    font-size: 36px;
+    margin-top: 200px;
+  }
+  .portada p {
+    margin: 130px 30% 0 30%;
+  }
+  .domingo,
+  .fiesta,
+  .contacto,
+  .localizacion {
+    min-height: 400px;
+  }
+  .domingo h2,
+  .fiesta h2,
+  .contacto h2,
+  .localizacion h2 {
+    font-size: 28px;
+    margin-top: 100px;
+  }
+  .desayuno {
+    min-height: 650px;
+  }
+  .desayuno h1 {
+    font-size: 36px;
+    margin-top: 150px;
+  }
+  .desayuno p {
+    margin: 50px 30% 100px 30%;
+  }
+  .categorias div {
+    width: 25%;
+    float: left;
+    min-height: 500px;
+  }
+  .categorias img {
+    width: 150px;
+    margin: 30px 0;
+  }
+  .categorias h2 {
+    margin-bottom: 10px;
+  }
+}
